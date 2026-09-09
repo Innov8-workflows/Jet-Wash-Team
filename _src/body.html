@@ -1,0 +1,849 @@
+<!-- The Jet Wash Team - built on the innov8 site-kit golden body.
+     Section order is the house standard: see rules/HOUSE-RULES.md. Do not
+     reorder it. Double-brace tokens are filled from site.config.js `tokens`; anything
+     left unresolved is reported by check.js. -->
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="{{BUSINESS}} home">
+      <span class="logo-mark" style="background-image:{{VAR:logo.webp}}" role="img" aria-label="{{BUSINESS}} logo"></span>
+      <span class="brand-txt">
+        <b>{{BUSINESS_SHORT}}</b>
+        <span>Exterior cleaning services</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#transformations">Transformations</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-call" href="tel:{{PHONE_TEL}}" data-track="call">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="lbl">{{PHONE}}</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MOBILE DRAWER ================= -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="drawer-top">
+    <a class="brand" href="#top">
+      <span class="logo-mark" style="background-image:{{VAR:logo.webp}}" aria-hidden="true"></span>
+      <span class="brand-txt"><b>{{BUSINESS_SHORT}}</b><span>Exterior cleaning services</span></span>
+    </a>
+    <button class="burger" id="closeDrawer" aria-label="Close menu" style="display:flex">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#services">Services <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#transformations">Transformations <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#gallery">Our Work <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#reviews">Reviews <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#about">About <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#areas">Areas <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#contact">Contact <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn btn-primary btn-block" href="tel:{{PHONE_TEL}}" data-track="call">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call {{PHONE}}
+    </a>
+    <a class="btn btn-ghost btn-block" href="https://wa.me/{{PHONE_WA}}" target="_blank" rel="noopener">Message on WhatsApp</a>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero s-dark" id="top">
+  <!-- HERO MEDIA: swap the slides below for a single <video class="hero-video" autoplay muted loop playsinline poster="..."><source src="data:video/mp4;base64,..." type="video/mp4"></video> -->
+  <div class="hero-media" id="heroMedia">
+    <div class="hero-slide on" style="background-image:{{VAR:hero1.webp}}"></div>
+    <div class="hero-slide" style="background-image:{{VAR:hero2.webp}}"></div>
+  </div>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-in">
+    <span class="hero-logo logo-mark" style="background-image:{{VAR:logo.webp}}" role="img" aria-label="{{BUSINESS}}"></span>
+    <h1>Driveways, roofs, render and patios brought back to <em>clean</em></h1>
+    <p class="hero-sub">Pressure washing for the surfaces that can take it and soft washing for the ones that cannot. Driveways, patios, roofs, render, gutters and cladding, for homes and businesses.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#contact">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+        Get a free quote
+      </a>
+      <a class="btn btn-ghost" href="tel:{{PHONE_TEL}}" data-track="call">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        {{PHONE}}
+      </a>
+    </div>
+    <div class="hero-strip">
+      <span class="hero-chip"><svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>Residential and commercial</span>
+      <span class="hero-chip"><svg class="icon" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Free no obligation quotes</span>
+      <span class="hero-chip opt"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Local jobs and nationwide contracts</span>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="trust s-dark">
+  <div class="wrap" style="padding-inline:0">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+        <b>Pressure and soft washing</b><span>The right method for each surface, not one machine for everything</span>
+      </div>
+      <div class="trust-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        <b>Results you can see</b><span>Before and after on the work, not just a promise</span>
+      </div>
+      <div class="trust-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        <b>Residential and commercial</b><span>Driveways and patios through to car parks and cladding</span>
+      </div>
+      <div class="trust-item">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+        <b>Accreditations <span class="ph">Placeholder</span></b><span>Send your accreditation logos and they go here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec s-light" id="services">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">What we do</span>
+      <h2 class="title">Exterior cleaning services</h2>
+      <p class="lede">Every outside surface on a property, cleaned the way that surface needs. From a single drive to a whole commercial site.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></svg></div>
+        <h3>Driveway and Patio Cleaning</h3>
+        <p>Block paving, slabs, resin, tarmac and concrete pressure washed back to the colour they were laid in, with the joints re-sanded where they need it.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <h3>Roof Cleaning</h3>
+        <p>Moss and lichen removed from tiles and slates without blasting the surface, so the roof drains as it should and looks it from the street.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg></div>
+        <h3>Soft Washing and Render Cleaning</h3>
+        <p>Low pressure cleaning for render, K-rend and painted walls. Lifts the green and black staining without stripping the finish underneath.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
+        <h3>Gutters and Fascia Cleaning</h3>
+        <p>Gutters cleared and running again, and the fascias and soffits cleaned back from grey to white, from the ground with poles wherever possible.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
+        <h3>Cladding and Maintenance</h3>
+        <p>Shop fronts, cladding, signage, car parks and forecourts for businesses, landlords and managing agents, worked around your opening hours.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ico"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18"/><path d="M3 12h18"/></svg></div>
+        <h3>Tennis Courts and Sports Surfaces</h3>
+        <p>Moss, algae and dirt cleared from macadam and artificial courts so the surface plays true and the lines show again.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRANSFORMATIONS ================= -->
+<section class="sec trans s-dark" id="transformations">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Before and after</span>
+      <h2 class="title">Real transformations</h2>
+      <p class="lede">Each clip shows how the surface started and how it was left. They play as you scroll to them.</p>
+    </div>
+    <div class="zig">
+
+      <article class="zig-row rv">
+        <div class="zig-media">
+          <video class="zig-video" muted loop playsinline preload="metadata" poster="{{ASSET:t1-poster.webp}}" data-scrollplay aria-label="A private tennis court going from moss-covered brown to clean grey macadam as it is pressure washed">
+            <source src="{{ASSET:t1.mp4}}" type="video/mp4">
+          </video>
+        </div>
+        <div class="zig-copy">
+          <span class="num">Project 01</span>
+          <h3>Private tennis court brought back into play</h3>
+          <p>Years of moss and algae had turned this court brown and slippery, with the white lines all but gone. The whole surface was pressure washed section by section, the growth flushed off and the run-off cleared, leaving clean grey macadam with the lines showing again.</p>
+          <div class="zig-tags"><span>Moss and algae removed</span><span>Full court pressure washed</span><span>Lines visible again</span><span>Run-off cleared</span></div>
+        </div>
+      </article>
+
+    </div>
+    <div class="center" style="margin-top:34px">
+      <p class="lede" style="font-size:13.5px"><span class="ph">Placeholder</span> More before and after clips drop in here as you send them. A short phone video of the before and the after works best.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="sec s-tint" id="gallery">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Our work</span>
+      <h2 class="title">Recent jobs</h2>
+      <p class="lede">Surfaces we have cleaned recently. Tap any photograph to see it full size.</p>
+    </div>
+    <div class="gal rv" id="gal">
+      <figure class="big"><img loading="lazy" src="{{ASSET:g1.webp}}" alt="Private tennis court after cleaning, clean grey macadam with bright white lines and the net in place"><figcaption>Tennis court after cleaning</figcaption></figure>
+      <figure><img loading="lazy" src="{{ASSET:g2.webp}}" alt="Tennis court mid clean, with the pressure washer spray sweeping across the half-cleaned surface"><figcaption>Court clean in progress</figcaption></figure>
+      <figure><img loading="lazy" src="{{ASSET:g3.webp}}" alt="The same tennis court before cleaning, covered in brown moss and algae with faded lines"><figcaption>Tennis court before</figcaption></figure>
+      <figure><img loading="lazy" src="{{ASSET:about2.webp}}" alt="A Jet Wash Team member taping out fresh court lines on the cleaned macadam"><figcaption>Court lines being re-marked</figcaption></figure>
+      <figure><img loading="lazy" src="{{ASSET:g5.webp}}" alt="Tennis court part way through cleaning, the pressure washer sweeping across with the mossy half still showing"><figcaption>Court clean part way through</figcaption></figure>
+    </div>
+
+    <div class="work-cta rv">
+      <button class="btn btn-primary" id="workOpen" type="button">
+        <svg class="icon" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        View all our work
+      </button>
+      <div class="work-count">
+        <svg class="icon" viewBox="0 0 24 24" style="width:15px;height:15px"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        <span id="workCount">5</span> job photographs
+      </div>
+    </div>
+    <div class="center" style="margin-top:18px">
+      <p class="lede" style="font-size:13.5px"><span class="ph">Placeholder</span> Send more job photographs, especially driveways, roofs and render, and the gallery fills out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="sec why s-light" id="why">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Why choose us</span>
+      <h2 class="title">Cleaned properly, not just blasted</h2>
+      <p class="lede">Anyone can hire a pressure washer. The difference is knowing which surfaces can take it and which ones cannot.</p>
+    </div>
+    <div class="why-grid">
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+        <h3>The right pressure for the surface</h3>
+        <p>Hard surfaces get the pressure they need. Roofs, render and painted walls get a soft wash instead. Using one setting for everything is how tiles get stripped and render gets scarred.</p>
+      </article>
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        <h3>You can see the difference</h3>
+        <p>Before and after photographs on the work, so you know exactly what was done and what it looked like before we started.</p>
+      </article>
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+        <h3>Free no obligation quotes</h3>
+        <p>Send a photograph and a rough size and you get a straight price. No sales visit, no pressure and no obligation.</p>
+      </article>
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Left clean, not just cleaned</h3>
+        <p>Moss and debris bagged up, drains cleared and the run-off washed away, so you are not left with a mess where the growth used to be.</p>
+      </article>
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        <h3>Residential and commercial</h3>
+        <p>From a single patio to car parks, forecourts and cladding on a schedule, handled by the same team with the same kit.</p>
+      </article>
+      <article class="why-card rv">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3>Big or small, one call</h3>
+        <p>A front step or a whole estate, the person you speak to is the person who turns up. No call centre and no subcontractors you have never met.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="sec rev s-tint" id="reviews">
+  <div class="wrap">
+    <div class="rev-head rv">
+      <div>
+        <span class="eyebrow">Reviews</span>
+        <h2 class="title">What our customers say</h2>
+        <p class="lede" style="margin-top:10px">One review below is a real Facebook recommendation. The rest are placeholders until your Google reviews are in.</p>
+      </div>
+      <div class="rev-score">
+        <div>
+          <b style="color:#7A8794">?.?</b>
+          <small><span class="ph">Placeholder</span></small>
+        </div>
+        <div>
+          <div class="stars muted" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+          </div>
+          <div style="font-size:12.5px;color:var(--paper-muted);margin-top:4px">Send your Google rating and review count</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rev-view rv" id="revView">
+      <div class="rev-track" id="revTrack"></div>
+    </div>
+    <div class="rev-ctl">
+      <button class="rev-arrow" id="revPrev" aria-label="Previous reviews">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="rev-pages" id="revPages"></div>
+      <button class="rev-arrow" id="revNext" aria-label="Next reviews">
+        <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="rev-plat rv">
+      <p class="rev-plat-lede"><span class="ph">Placeholder</span> The Facebook link is live. Google and Checkatrade are demonstration links until you send the profile URLs.</p>
+      <div class="plat-row">
+        <a class="plat plat-google" href="#" aria-label="Read our reviews on Google">
+          <span class="plat-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></span>
+          <span class="plat-txt"><b>Google Reviews</b><span>Read them on Google</span></span>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </a>
+        <a class="plat plat-fb" href="{{FACEBOOK}}/reviews" target="_blank" rel="noopener" aria-label="Read our reviews on Facebook">
+          <span class="plat-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
+          <span class="plat-txt"><b>Facebook Reviews</b><span>Read them on Facebook</span></span>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </a>
+        <a class="plat plat-cat" href="#" aria-label="Read our reviews on Checkatrade">
+          <span class="plat-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#16357A"/><path d="m7 12.4 3.2 3.2L17 8.8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="plat-txt"><b>Checkatrade</b><span>Read them on Checkatrade</span></span>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec s-light" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-media rv">
+        <div class="main"><img loading="lazy" src="{{ASSET:about1.webp}}" alt="The sign-written Jet Wash Team van parked on a residential street, listing roof, gutter, driveway, render and cladding cleaning"></div>
+        <div class="inset"><div role="img" aria-label="A Jet Wash Team member in a branded shirt soft washing the front of a house with a telescopic lance" style="width:100%;height:100%;background-image:{{VAR:hero1.webp}};background-size:cover;background-position:center 82%"></div></div>
+      </div>
+      <div class="about-copy rv">
+        <span class="eyebrow">Meet the team</span>
+        <h2>{{BUSINESS}}</h2>
+        <p>An exterior cleaning team taking on residential and commercial work, from a single driveway or patio to roofs, render, gutters and cladding on larger sites. The van goes where the job is, and bigger contracts are taken on nationwide.</p>
+        <p>The kit and the method change with the surface. Block paving and tarmac get pressure washed, roofs and render get a soft wash, and everything gets cleared up afterwards. The before and after is the whole point, so it is what gets posted.</p>
+        <p><span class="ph">Placeholder</span> Your own story goes here. Send how long you have been going, who is on the team, where you are based and a photograph of yourself, and this gets rewritten in your words.</p>
+        <div class="about-sign">
+          <span class="logo-mark logo-tile" style="background-image:{{VAR:logo.webp}}" aria-hidden="true"></span>
+          <div>
+            <b><span class="ph">Owner name to confirm</span></b>
+            <span>Owner, {{BUSINESS}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AREAS =================
+     areas.webp is the final frame of the tennis court clip, straight on: the
+     cleaned court with the net and treeline. Not a hero slide. -->
+<section class="sec areas s-brand" id="areas">
+  <div class="areas-bg" style="background-image:{{ASSET:areas.webp}};background-position:center 38%" role="img" aria-label="A freshly cleaned private tennis court seen from the baseline, with the net and a treeline behind it"></div>
+  <div class="areas-scrim"></div>
+  <div class="wrap">
+    <div class="area-wrap">
+      <div class="rv">
+        <span class="eyebrow">Where we work</span>
+        <h2 class="title">Local jobs and nationwide contracts</h2>
+        <p class="lede">Based in {{TOWN}} and covering the surrounding areas for domestic work, with larger commercial contracts taken on across the country. If you are not sure whether we cover you, it is always worth asking.</p>
+        <div class="hero-btns" style="justify-content:flex-start;margin-top:24px">
+          <a class="btn btn-primary" href="#contact">Check your postcode</a>
+        </div>
+      </div>
+      <div class="chips rv">
+        <span class="chip core"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>{{TOWN}}</span>
+        <span class="chip"><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Surrounding areas</span>
+        <span class="chip"><svg class="icon" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>Commercial contracts nationwide</span>
+        <span class="chip ph-chip"><span class="ph">Placeholder</span>Send your full town list</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec s-tint" id="contact">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="title">Tell us what needs cleaning</h2>
+      <p class="lede">Fill this in and it opens WhatsApp with your details already written out. A photograph of the surface helps with the price.</p>
+    </div>
+    <div class="form-grid">
+      <div class="contact-list rv">
+        <a class="contact-row" href="tel:{{PHONE_TEL}}" data-track="call">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><small>Call or WhatsApp</small><b>{{PHONE}}</b></div>
+        </a>
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <div><small>Email</small><b><span class="ph">Placeholder</span> Send your email address</b></div>
+        </div>
+        <a class="contact-row" href="{{FACEBOOK}}" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <div><small>Facebook</small><b>Follow our latest jobs</b></div>
+        </a>
+        <a class="contact-row" href="{{INSTAGRAM}}" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <div><small>Instagram and TikTok</small><b>@jetwashteam</b></div>
+        </a>
+        <div class="contact-row dupe">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Coverage</small><b>{{TOWN}}, surrounding areas and nationwide contracts</b></div>
+        </div>
+        <div class="contact-row">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><small>Opening hours</small><b><span class="ph">Placeholder</span> To confirm</b></div>
+        </div>
+      </div>
+
+      <form id="quoteForm" class="rv" novalidate>
+        <div class="f2">
+          <label class="field"><span>Your name</span><input type="text" name="name" required autocomplete="name" placeholder="Jane Smith"></label>
+          <label class="field"><span>Phone</span><input type="tel" name="phone" required autocomplete="tel" placeholder="07000 000000"></label>
+        </div>
+        <div class="f2">
+          <label class="field"><span>Town or postcode</span><input type="text" name="area" autocomplete="postal-code" placeholder="Town or postcode"></label>
+          <label class="field"><span>What needs cleaning</span>
+            <select name="service">
+              <option>Driveway or patio</option>
+              <option>Roof</option>
+              <option>Render or soft washing</option>
+              <option>Gutters and fascias</option>
+              <option>Cladding or commercial</option>
+              <option>Tennis court or sports surface</option>
+              <option>Something else</option>
+            </select>
+          </label>
+        </div>
+        <label class="field"><span>Tell us about the job</span><textarea name="detail" placeholder="Rough size of the area, what it is made of, how bad the growth is and any timescale."></textarea></label>
+        <button class="btn btn-primary btn-block" type="submit">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+          Send via WhatsApp
+        </button>
+        <p class="form-note">This opens WhatsApp with your message ready to send. Nothing is sent until you press send yourself.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="sec cta s-dark">
+  <div class="cta-bg" style="background-image:{{VAR:hero2.webp}}"></div>
+  <div class="cta-scrim"></div>
+  <div class="wrap rv">
+    <h2>Ready to see it clean again?</h2>
+    <p>Send a photograph and a rough size and you will get a straight price back. Big or small, give us a call.</p>
+    <div class="hero-btns">
+      <a class="btn btn-cyan" href="tel:{{PHONE_TEL}}" data-track="call">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call {{PHONE}}
+      </a>
+      <a class="btn btn-ghost" href="https://wa.me/{{PHONE_WA}}" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        WhatsApp us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot s-dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="logo-mark" style="background-image:{{VAR:logo.webp}}" role="img" aria-label="{{BUSINESS}}"></span>
+        <p>Exterior cleaning services for homes and businesses. Driveways, patios, roofs, render, gutters and cladding, pressure washed or soft washed depending on the surface.</p>
+        <div class="socials">
+          <a href="{{FACEBOOK}}" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="{{INSTAGRAM}}" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/{{PHONE_WA}}" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Driveway and patio cleaning</a></li>
+          <li><a href="#services">Roof cleaning</a></li>
+          <li><a href="#services">Soft washing and render cleaning</a></li>
+          <li><a href="#services">Gutters and fascia cleaning</a></li>
+          <li><a href="#services">Cladding and maintenance</a></li>
+          <li><a href="#services">Tennis courts and sports surfaces</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Areas covered</h4>
+        <ul>
+          <li>{{TOWN}}</li>
+          <li>Surrounding areas</li>
+          <li>Commercial contracts nationwide</li>
+          <li><span class="ph">Placeholder</span> Full town list to follow</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:{{PHONE_TEL}}" data-track="call">{{PHONE}}</a></li>
+          <li><a href="https://wa.me/{{PHONE_WA}}" target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li><a href="{{FACEBOOK}}" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="{{INSTAGRAM}}" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="{{TIKTOK}}" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+        <div class="accred"><span class="ph">Placeholder</span> Accreditation and insurance logos go here once supplied.</div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <small>Copyright 2026 {{BUSINESS}}. All rights reserved.</small>
+      <small>Website by <a href="https://innov8workflows.co.uk" target="_blank" rel="noopener">Innov8 Workflows</a></small>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+<a class="wa" href="https://wa.me/{{PHONE_WA}}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" data-track="whatsapp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- ================= OUR WORK (full panel) ================= -->
+<div class="work" id="work" role="dialog" aria-modal="true" aria-labelledby="workTitle" aria-hidden="true">
+  <header class="work-top">
+    <div class="work-top-in">
+      <div class="work-id">
+        <span class="logo-mark" style="background-image:{{VAR:logo.webp}}" aria-hidden="true"></span>
+        <div>
+          <b id="workTitle">Our Work</b>
+          <span>Exterior cleaning for homes and businesses</span>
+        </div>
+      </div>
+      <button class="work-close" id="workClose" type="button">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        <span class="lbl">Close</span>
+      </button>
+    </div>
+  </header>
+  <div class="work-body">
+    <div class="work-grid" id="workGrid"></div>
+    <div class="work-foot">
+      <a class="btn btn-primary" href="#contact" id="workQuote">Get a quote for your property</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE_TEL}}" data-track="call" style="color:#EAF0F5;border-color:rgba(255,255,255,.26)">{{PHONE}}</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project photo">
+  <button class="lb-close" id="lbClose" aria-label="Close"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous"><svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav next" id="lbNext" aria-label="Next"><svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var WA = "{{PHONE_WA}}";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- nav ---------- */
+  var nav = document.getElementById("nav");
+  var onScroll = function(){ nav.classList.toggle("solid", window.scrollY > 40); };
+  onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
+
+  var drawer = document.getElementById("drawer"), burger = document.getElementById("burger");
+  var openD = function(o){
+    drawer.classList.toggle("open", o);
+    burger.setAttribute("aria-expanded", o ? "true" : "false");
+    document.body.style.overflow = o ? "hidden" : "";
+  };
+  burger.addEventListener("click", function(){ openD(true); });
+  document.getElementById("closeDrawer").addEventListener("click", function(){ openD(false); });
+  drawer.querySelectorAll("nav a").forEach(function(a){ a.addEventListener("click", function(){ openD(false); }); });
+
+  /* ---------- hero slider (swap for a video by replacing #heroMedia contents) ---------- */
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".hero-slide"));
+  var dotsBox = document.getElementById("heroDots"), hi = 0, heroTimer;
+  if (slides.length > 1){
+    slides.forEach(function(_, i){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = i === 0 ? "on" : "";
+      b.setAttribute("aria-label", "Slide " + (i+1));
+      b.addEventListener("click", function(){ goHero(i); restartHero(); });
+      dotsBox.appendChild(b);
+    });
+    var goHero = function(n){
+      hi = (n + slides.length) % slides.length;
+      slides.forEach(function(s, i){ s.classList.toggle("on", i === hi); });
+      dotsBox.querySelectorAll("button").forEach(function(b, i){ b.classList.toggle("on", i === hi); });
+    };
+    var restartHero = function(){
+      clearInterval(heroTimer);
+      heroTimer = setInterval(function(){ goHero(hi + 1); }, 6000);
+    };
+    restartHero();
+  } else if (dotsBox) { dotsBox.style.display = "none"; }
+
+  /* ---------- transformation clips: play when in view, pause when not ---------- */
+  var scrollVids = Array.prototype.slice.call(document.querySelectorAll("video[data-scrollplay]"));
+  if (scrollVids.length){
+    var playVid = function(v){ var p = v.play(); if (p && p.catch) p.catch(function(){}); };
+    if ("IntersectionObserver" in window){
+      var vio = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if (en.isIntersecting) playVid(en.target); else en.target.pause(); });
+      }, {threshold:0.35});
+      scrollVids.forEach(function(v){ vio.observe(v); });
+    } else {
+      scrollVids.forEach(playVid);
+    }
+  }
+
+  /* ---------- before / after sliders ---------- */
+  document.querySelectorAll("[data-ba]").forEach(function(ba){
+    var drag = false;
+    var set = function(clientX){
+      var r = ba.getBoundingClientRect();
+      var p = Math.min(100, Math.max(0, ((clientX - r.left) / r.width) * 100));
+      ba.style.setProperty("--pos", p.toFixed(2) + "%");
+    };
+    var down = function(e){ drag = true; set(e.touches ? e.touches[0].clientX : e.clientX); };
+    var move = function(e){
+      if (!drag) return;
+      if (e.touches) { set(e.touches[0].clientX); }
+      else { e.preventDefault(); set(e.clientX); }
+    };
+    var up = function(){ drag = false; };
+    ba.addEventListener("mousedown", down);
+    ba.addEventListener("touchstart", down, {passive:true});
+    window.addEventListener("mousemove", move);
+    window.addEventListener("touchmove", move, {passive:true});
+    window.addEventListener("mouseup", up);
+    window.addEventListener("touchend", up);
+    ba.addEventListener("click", function(e){ set(e.clientX); });
+  });
+
+  /* ---------- gallery, Our Work panel and lightbox ---------- */
+  var gal = document.getElementById("gal");
+  var galFigs = Array.prototype.slice.call(gal.querySelectorAll("figure"));
+  var figs = galFigs.map(function(f){ return f.querySelector("img"); });
+  var countEl = document.getElementById("workCount");
+  if (countEl) countEl.textContent = figs.length;
+
+  var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg"), li = 0;
+  var work = document.getElementById("work"), workGrid = document.getElementById("workGrid");
+  var lockScroll = function(on){ document.body.style.overflow = on ? "hidden" : ""; };
+
+  var openLb = function(i){
+    li = (i + figs.length) % figs.length;
+    lbImg.src = figs[li].src;
+    lbImg.alt = figs[li].alt;
+    lb.classList.add("open");
+    lockScroll(true);
+  };
+  var closeLb = function(){
+    lb.classList.remove("open");
+    // the Our Work panel is its own scroll container, so only release the page
+    // scroll lock if that panel is not still open behind the lightbox
+    lockScroll(work.classList.contains("open"));
+  };
+  galFigs.forEach(function(f, i){ f.addEventListener("click", function(){ openLb(i); }); });
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  document.getElementById("lbPrev").addEventListener("click", function(e){ e.stopPropagation(); openLb(li - 1); });
+  document.getElementById("lbNext").addEventListener("click", function(e){ e.stopPropagation(); openLb(li + 1); });
+  lb.addEventListener("click", function(e){ if (e.target === lb) closeLb(); });
+
+  /* the panel is populated once, on first open, by cloning the gallery figures.
+     Cloning copies the data URI by reference, so nothing is embedded twice. */
+  var workBuilt = false;
+  var buildWork = function(){
+    if (workBuilt) return;
+    galFigs.forEach(function(f, i){
+      var c = f.cloneNode(true);
+      c.className = "";
+      c.addEventListener("click", function(){ openLb(i); });
+      workGrid.appendChild(c);
+    });
+    workBuilt = true;
+  };
+  var openWork = function(){
+    buildWork();
+    work.classList.add("open");
+    work.setAttribute("aria-hidden", "false");
+    lockScroll(true);
+    work.querySelector(".work-body").scrollTop = 0;
+    document.getElementById("workClose").focus();
+  };
+  var closeWork = function(){
+    work.classList.remove("open");
+    work.setAttribute("aria-hidden", "true");
+    lockScroll(false);
+  };
+  document.getElementById("workOpen").addEventListener("click", openWork);
+  document.getElementById("workClose").addEventListener("click", closeWork);
+  document.getElementById("workQuote").addEventListener("click", closeWork);
+
+  document.addEventListener("keydown", function(e){
+    if (lb.classList.contains("open")){
+      if (e.key === "Escape") closeLb();
+      if (e.key === "ArrowLeft") openLb(li - 1);
+      if (e.key === "ArrowRight") openLb(li + 1);
+      return;
+    }
+    if (e.key === "Escape" && work.classList.contains("open")) closeWork();
+  });
+
+  /* ---------- reviews carousel ----------
+     The first entry is a real Facebook recommendation, quoted verbatim from
+     facebook.com/Jetwashteam/reviews (seen 2026-09-09). Everything else is a
+     placeholder until the client's real reviews are supplied. */
+  var REVIEWS = [
+    {n:"Heather Louise", t:"Had car cleaned by them today and best car clean I have had. They were perfectionists at every little bit of the car. Highly recommend", w:"Facebook", d:"Recommends The Jet Wash Team on Facebook", real:true},
+    {n:"[Customer name]", t:"[Placeholder review] Replace this with a real review. Around two or three sentences describing the job and how it went reads best on a card this size.", w:"[Town]", d:"[Date]"},
+    {n:"[Customer name]", t:"[Placeholder review] Real reviews carry far more weight than anything written on the site itself, so this section is deliberately left blank until yours are in.", w:"[Town]", d:"[Date]"},
+    {n:"[Customer name]", t:"[Placeholder review] Send over the wording from your Google or Facebook reviews and each one drops straight into a card like this.", w:"[Town]", d:"[Date]"},
+    {n:"[Customer name]", t:"[Placeholder review] Mentioning the actual surface, driveway, roof, render or patio, helps both customers and search engines understand what you do.", w:"[Town]", d:"[Date]"},
+    {n:"[Customer name]", t:"[Placeholder review] A first name and a town is enough. No need for full names or addresses on a public website.", w:"[Town]", d:"[Date]"}
+  ];
+  var AV = ["#2AAEF2","#1F5FA8","#1479B8","#5A96DB","#5FC6FF","#153F70"];
+  var STAR = '<svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>';
+  var track = document.getElementById("revTrack"), pagesBox = document.getElementById("revPages");
+  REVIEWS.forEach(function(r, i){
+    var cell = document.createElement("div");
+    cell.className = "rev-cell";
+    cell.innerHTML =
+      '<article class="rev-card">' +
+        '<div class="rev-top">' +
+          '<div class="rev-av" style="background:' + AV[i % AV.length] + '">' + (r.real ? r.n.charAt(0) : '?') + '</div>' +
+          '<div class="rev-who"><b>' + r.n + '</b><span>' + r.w + '</span></div>' +
+        '</div>' +
+        '<div class="stars" aria-label="5 out of 5">' + STAR + STAR + STAR + STAR + STAR + '</div>' +
+        '<p>' + r.t + '</p>' +
+        '<div class="rev-foot">' + (r.real ? r.d : '<span class="ph">Placeholder</span> Verified customer review, ' + r.d) + '</div>' +
+      '</article>';
+    track.appendChild(cell);
+  });
+
+  var perView = function(){ return window.innerWidth <= 680 ? 1 : (window.innerWidth <= 1024 ? 2 : 3); };
+  var rp = 0, revTimer, pv = perView();
+  var pageCount = function(){ return Math.max(1, Math.ceil(REVIEWS.length / pv)); };
+  var buildPages = function(){
+    pagesBox.innerHTML = "";
+    for (var i = 0; i < pageCount(); i++){
+      (function(i){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Reviews page " + (i+1));
+        b.addEventListener("click", function(){ goRev(i); resetRev(); });
+        pagesBox.appendChild(b);
+      })(i);
+    }
+  };
+  var goRev = function(n){
+    var pc = pageCount();
+    rp = (n + pc) % pc;
+    track.style.transform = "translateX(-" + (rp * 100) + "%)";
+    pagesBox.querySelectorAll("button").forEach(function(b, i){ b.classList.toggle("on", i === rp); });
+  };
+  var resetRev = function(){
+    clearInterval(revTimer);
+    revTimer = setInterval(function(){ goRev(rp + 1); }, 6500);
+  };
+  buildPages(); goRev(0); resetRev();
+  var revView = document.getElementById("revView");
+  revView.addEventListener("mouseenter", function(){ clearInterval(revTimer); });
+  revView.addEventListener("mouseleave", resetRev);
+  document.getElementById("revPrev").addEventListener("click", function(){ goRev(rp - 1); resetRev(); });
+  document.getElementById("revNext").addEventListener("click", function(){ goRev(rp + 1); resetRev(); });
+
+  /* swipe on mobile */
+  var sx = 0, sy = 0, swiping = false;
+  revView.addEventListener("touchstart", function(e){ sx = e.touches[0].clientX; sy = e.touches[0].clientY; swiping = true; }, {passive:true});
+  revView.addEventListener("touchend", function(e){
+    if (!swiping) return;
+    swiping = false;
+    var dx = e.changedTouches[0].clientX - sx;
+    var dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)){ goRev(rp + (dx < 0 ? 1 : -1)); resetRev(); }
+  }, {passive:true});
+
+  var lastPv = pv;
+  window.addEventListener("resize", function(){
+    pv = perView();
+    if (pv !== lastPv){ lastPv = pv; buildPages(); goRev(0); resetRev(); }
+  });
+
+  /* ---------- contact form to WhatsApp ---------- */
+  document.getElementById("quoteForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target;
+    var v = function(k){ return (f.elements[k] && f.elements[k].value || "").trim(); };
+    if (!v("name") || !v("phone")){
+      var bad = !v("name") ? f.elements.name : f.elements.phone;
+      bad.focus();
+      bad.style.borderColor = "#E4574C";
+      setTimeout(function(){ bad.style.borderColor = ""; }, 2200);
+      return;
+    }
+    var lines = [
+      "Hi {{BUSINESS}}, I would like a quote.",
+      "",
+      "Name: " + v("name"),
+      "Phone: " + v("phone"),
+      "Area: " + (v("area") || "Not given"),
+      "Needs cleaning: " + v("service"),
+      "",
+      "Details: " + (v("detail") || "Not given")
+    ];
+    var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+    var win = window.open(url, "_blank");
+    if (!win) window.location.href = url;
+  });
+
+  /* ---------- pause timers while the tab is hidden ---------- */
+  document.addEventListener("visibilitychange", function(){
+    if (document.hidden){ clearInterval(heroTimer); clearInterval(revTimer); }
+    else { if (typeof restartHero === "function") restartHero(); resetRev(); }
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  if ("IntersectionObserver" in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:0.06});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = ((i % 4) * 60) + "ms";
+      io.observe(el);
+    });
+  } else {
+    document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
