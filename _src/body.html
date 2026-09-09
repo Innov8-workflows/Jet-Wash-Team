@@ -2,6 +2,19 @@
      Section order is the house standard: see rules/HOUSE-RULES.md. Do not
      reorder it. Double-brace tokens are filled from site.config.js `tokens`; anything
      left unresolved is reported by check.js. -->
+<style>
+/* Per-project geometry only. Colour and type stay with the art direction. */
+/* Why choose us carries the soft-washing photograph beside the cards: 5/12 photo, 7/12 cards
+   two-up. Below 1024px it stacks, photo first, and the cards go back to the template grid. */
+.why-layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:stretch;margin-top:38px}
+.why-layout .why-grid{grid-template-columns:repeat(2,1fr);margin-top:0}
+.why-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--card-line);box-shadow:var(--sh-lg);background:var(--card);min-height:420px}
+.why-photo .why-photo-img{position:absolute;inset:0;background-size:cover;background-position:center 35%}
+.why-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;font-size:13px;line-height:1.45;color:#fff;background:linear-gradient(180deg,transparent,rgba(var(--ink-rgb),.78))}
+@media(max-width:1024px){.why-layout{grid-template-columns:1fr;gap:18px}.why-photo{min-height:0;aspect-ratio:16/10}.why-layout .why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.why-layout{margin-top:22px;gap:14px}.why-photo{aspect-ratio:3/4;border-radius:14px}.why-photo .why-photo-img{background-position:center 78%}.why-photo figcaption{padding:12px 14px;font-size:12px}}
+</style>
+
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="nav-in">
@@ -232,6 +245,11 @@
       <h2 class="title">Cleaned properly, not just blasted</h2>
       <p class="lede">Anyone can hire a pressure washer. The difference is knowing which surfaces can take it and which ones cannot.</p>
     </div>
+    <div class="why-layout">
+    <figure class="why-photo rv">
+      <div class="why-photo-img" role="img" aria-label="A Jet Wash Team member in a branded shirt soft washing the render and roof tiles of a two storey house from the ground with a telescopic lance" style="background-image:{{VAR:hero1.webp}}"></div>
+      <figcaption>Soft washing a house from the ground: low pressure on the render and tiles, so the finish stays and the staining goes.</figcaption>
+    </figure>
     <div class="why-grid">
       <article class="why-card rv">
         <svg class="icon" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
@@ -263,6 +281,7 @@
         <h3>Big or small, one call</h3>
         <p>A front step or a whole estate, the person you speak to is the person who turns up. No call centre and no subcontractors you have never met.</p>
       </article>
+    </div>
     </div>
   </div>
 </section>
@@ -336,7 +355,7 @@
     <div class="about-grid">
       <div class="about-media rv">
         <div class="main"><img loading="lazy" src="{{ASSET:about1.webp}}" alt="The sign-written Jet Wash Team van parked on a residential street, listing roof, gutter, driveway, render and cladding cleaning"></div>
-        <div class="inset"><div role="img" aria-label="A Jet Wash Team member in a branded shirt soft washing the front of a house with a telescopic lance" style="width:100%;height:100%;background-image:{{VAR:hero1.webp}};background-size:cover;background-position:center 82%"></div></div>
+        <div class="inset"><div role="img" aria-label="A Jet Wash Team member in branded workwear taping out court lines on a freshly cleaned surface" style="width:100%;height:100%;background-image:{{VAR:about2.webp}};background-size:cover;background-position:center 60%"></div></div>
       </div>
       <div class="about-copy rv">
         <span class="eyebrow">Meet the team</span>
