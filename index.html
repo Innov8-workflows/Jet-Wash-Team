@@ -1444,7 +1444,10 @@ form{background:var(--card);border:1px solid var(--card-line);border-radius:var(
     ci = (ci + 1) % clips.length;
   };
   var startHeroLoop = function(){ clearInterval(heroLoop); heroLoop = setInterval(swapClip, PERIOD); };
-  if (clips.length > 1 && !reduce){
+  /* The loop runs under prefers-reduced-motion too. It is a one second opacity fade, not
+     movement, and a hero that stops on clip one reads as broken (Jay's own machine has the
+     setting on, which is how this was found). */
+  if (clips.length > 1){
     startHeroLoop();
   } else if (clips.length){
     clips[0].loop = true;
@@ -1668,7 +1671,7 @@ form{background:var(--card);border:1px solid var(--card-line);border-radius:var(
   /* ---------- pause timers while the tab is hidden ---------- */
   document.addEventListener("visibilitychange", function(){
     if (document.hidden){ clearInterval(heroTimer); clearInterval(revTimer); clearInterval(heroLoop); }
-    else { if (typeof restartHero === "function") restartHero(); resetRev(); if (clips.length > 1 && !reduce){ playClip(clips[ci]); startHeroLoop(); } }
+    else { if (typeof restartHero === "function") restartHero(); resetRev(); if (clips.length > 1){ playClip(clips[ci]); startHeroLoop(); } }
   });
 
   /* ---------- reveal on scroll ---------- */
