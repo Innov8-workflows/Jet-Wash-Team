@@ -38,6 +38,10 @@ module.exports = {
     'band-g1': '#0F2233',
     'band-g2': '#0C1B2C',
     'chip-core-bg': '#1C3348',
+
+    /* The direction's CTA scrim is built for a bright photograph. a1.jpeg (the finished
+       court) is a grey mid-tone and vanished under it, so the wash is lighter here. */
+    'cta-scrim': 'linear-gradient(135deg,rgba(var(--brand-rgb),.38),rgba(var(--ink-rgb),.48) 52%,rgba(var(--brand2-rgb),.36)),rgba(var(--ink-rgb),.14)',
   },
 
   /* A claim here is a statement that the client supplied evidence.
