@@ -12,6 +12,12 @@
 .why-photo .why-photo-img{position:absolute;inset:0;background-size:cover;background-position:center 35%}
 .why-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;font-size:13px;line-height:1.45;color:#fff;background:linear-gradient(180deg,transparent,rgba(var(--ink-rgb),.78))}
 @media(max-width:1024px){.why-layout{grid-template-columns:1fr;gap:18px}.why-photo{min-height:0;aspect-ratio:16/10}.why-layout .why-grid{grid-template-columns:repeat(2,1fr)}}
+/* Two-clip hero. Only the incoming clip fades (opacity 0 to 1) and it sits strictly above the
+   outgoing one: .top z-index 2, .under z-index 1, idle 0. The outgoing stays opaque underneath
+   so the picture never dips dark mid-fade. */
+.hero-clip{opacity:0;z-index:0;transition:opacity 1s ease}
+.hero-clip.top{opacity:1;z-index:2}
+.hero-clip.under{opacity:1;z-index:1}
 @media(max-width:680px){.why-layout{margin-top:22px;gap:14px}.why-photo{aspect-ratio:3/4;border-radius:14px}.why-photo .why-photo-img{background-position:center 78%}.why-photo figcaption{padding:12px 14px;font-size:12px}}
 </style>
 
@@ -79,8 +85,11 @@
 <section class="hero s-dark" id="top">
   <!-- HERO MEDIA: swap the slides below for a single <video class="hero-video" autoplay muted loop playsinline poster="..."><source src="data:video/mp4;base64,..." type="video/mp4"></video> -->
   <div class="hero-media" id="heroMedia">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="{{ASSET:hero-poster.webp}}" aria-label="A Jet Wash Team member soft washing the render and roof tiles of a two storey house from the ground with a telescopic lance">
+    <video class="hero-video hero-clip top" autoplay muted playsinline preload="auto" poster="{{ASSET:hero-poster.webp}}" aria-label="A Jet Wash Team member soft washing the render and roof tiles of a two storey house from the ground with a telescopic lance">
       <source src="{{ASSET:hero.mp4}}" type="video/mp4">
+    </video>
+    <video class="hero-video hero-clip" muted playsinline preload="auto" aria-label="A Jet Wash Team member cleaning a block paved driveway with a rotary surface cleaner, the wet paving coming up red and clean behind it">
+      <source src="{{ASSET:hero2.mp4}}" type="video/mp4">
     </video>
   </div>
   <div class="hero-scrim"></div>
@@ -356,7 +365,7 @@
     <div class="about-grid">
       <div class="about-media rv">
         <div class="main"><img loading="lazy" src="{{ASSET:about1.webp}}" alt="The sign-written Jet Wash Team van parked on a residential street, listing roof, gutter, driveway, render and cladding cleaning"></div>
-        <div class="inset"><div role="img" aria-label="A Jet Wash Team member in branded workwear taping out court lines on a freshly cleaned surface" style="width:100%;height:100%;background-image:{{VAR:about2.webp}};background-size:cover;background-position:center 60%"></div></div>
+        <div class="inset"><div role="img" aria-label="The finished tennis court in evening light, clean green surface with white lines" style="width:100%;height:100%;background-image:{{VAR:hero2.webp}};background-size:cover;background-position:center 68%"></div></div>
       </div>
       <div class="about-copy rv">
         <span class="eyebrow">Meet the team</span>
@@ -630,6 +639,30 @@
     restartHero();
   } else if (dotsBox) { dotsBox.style.display = "none"; }
 
+  /* ---------- hero clips: A then B then A, crossfading, on a loop ----------
+     PERIOD + FADE must stay inside the shortest clip (5.04s): 3900 + 1000. Only the
+     incoming clip fades and it always takes the higher z-index (.top over .under). */
+  var clips = Array.prototype.slice.call(document.querySelectorAll(".hero-clip"));
+  var heroLoop, PERIOD = 3900, FADE = 1000, ci = 0;
+  var playClip = function(v){ var p = v.play(); if (p && p.catch) p.catch(function(){}); };
+  var swapClip = function(){
+    var cur = clips[ci], next = clips[(ci + 1) % clips.length];
+    if (!next.seeking && next.readyState >= 2){ try { next.currentTime = 0; } catch(e){} }
+    next.classList.remove("under");
+    cur.classList.remove("top"); cur.classList.add("under");
+    playClip(next);
+    void next.offsetWidth;
+    next.classList.add("top");
+    setTimeout(function(){ cur.classList.remove("under"); cur.pause(); }, FADE + 80);
+    ci = (ci + 1) % clips.length;
+  };
+  var startHeroLoop = function(){ clearInterval(heroLoop); heroLoop = setInterval(swapClip, PERIOD); };
+  if (clips.length > 1 && !reduce){
+    startHeroLoop();
+  } else if (clips.length){
+    clips[0].loop = true;
+  }
+
   /* ---------- transformation clips: play when in view, pause when not ---------- */
   var scrollVids = Array.prototype.slice.call(document.querySelectorAll("video[data-scrollplay]"));
   if (scrollVids.length){
@@ -847,8 +880,8 @@
 
   /* ---------- pause timers while the tab is hidden ---------- */
   document.addEventListener("visibilitychange", function(){
-    if (document.hidden){ clearInterval(heroTimer); clearInterval(revTimer); }
-    else { if (typeof restartHero === "function") restartHero(); resetRev(); }
+    if (document.hidden){ clearInterval(heroTimer); clearInterval(revTimer); clearInterval(heroLoop); }
+    else { if (typeof restartHero === "function") restartHero(); resetRev(); if (clips.length > 1 && !reduce){ playClip(clips[ci]); startHeroLoop(); } }
   });
 
   /* ---------- reveal on scroll ---------- */
